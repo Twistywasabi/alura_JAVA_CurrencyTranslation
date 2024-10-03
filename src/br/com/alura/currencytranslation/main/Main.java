@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
+        Gson gson = new Gson();
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://v6.exchangerate-api.com/v6/7d61ff25c057c9d073e854d8/latest/USD"))
@@ -22,7 +23,6 @@ public class Main {
                 .send(request, HttpResponse.BodyHandlers.ofString());
         String json = response.body();
 
-        Gson gson = new Gson();
 
         ExchangeRates exchangeRatesList = gson.fromJson(json, ExchangeRates.class);
 
