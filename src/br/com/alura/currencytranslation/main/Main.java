@@ -1,7 +1,9 @@
 package br.com.alura.currencytranslation.main;
 
 import br.com.alura.currencytranslation.models.ExchangeRates;
+import br.com.alura.currencytranslation.models.ExchangeRatesAYRTech;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import java.io.IOException;
@@ -23,10 +25,10 @@ public class Main {
                 .send(request, HttpResponse.BodyHandlers.ofString());
         String json = response.body();
 
-
-        ExchangeRates exchangeRatesList = gson.fromJson(json, ExchangeRates.class);
-
+        ExchangeRatesAYRTech exchangeRatesListAYRTech = gson.fromJson(json, ExchangeRatesAYRTech.class);
+        ExchangeRates exchangeRatesList = new ExchangeRates(exchangeRatesListAYRTech.conversionRates());
+        System.out.println("exchangeRatesList converted");
         System.out.println(exchangeRatesList);
-
+        exchangeRatesList.convertBrazilCurrencyToDollar(5.5);
     }
 }
