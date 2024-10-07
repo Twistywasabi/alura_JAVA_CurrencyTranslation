@@ -28,6 +28,9 @@ public class Main {
         ExchangeRatesAYRTech exchangeRatesListAYRTech = gson.fromJson(json, ExchangeRatesAYRTech.class);
         ExchangeRates exchangeRatesList = new ExchangeRates(exchangeRatesListAYRTech.conversionRates());
         System.out.println("exchangeRatesList converted");
-        exchangeRatesList.convertUsdBrl(false);
+        //exchangeRatesList.convertUsdArs(false);
+        //exchangeRatesList.convertUsdBrl(false);
+        exchangeRatesList.convertUsdCop(false);
+
     }
 }
