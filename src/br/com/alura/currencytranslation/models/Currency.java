@@ -17,6 +17,14 @@ public class Currency {
         this.valueCurrency = valueCurrency;
     }
 
+    public void setTypeCurrency(String typeCurrency) {
+        this.typeCurrency = typeCurrency;
+    }
+
+    public void setValueCurrency(double valueCurrency) {
+        this.valueCurrency = valueCurrency;
+    }
+
     @Override
     public String toString() {
         return "Currency{" +
