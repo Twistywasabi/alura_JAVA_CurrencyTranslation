@@ -29,6 +29,6 @@ public class Main {
         ExchangeRates exchangeRatesList = new ExchangeRates(exchangeRatesListAYRTech.conversionRates());
         System.out.println("exchangeRatesList converted");
         System.out.println(exchangeRatesList);
-        exchangeRatesList.convertBrazilCurrencyToDollar(5.5);
+        exchangeRatesList.convertBrlToUsd();
     }
 }
