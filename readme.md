@@ -8,7 +8,7 @@ Create a program with user interaction by text (console) with at least six curre
 
 For this project, we will consume the Exchange Rate API (link on "references") to make a dynamic exchange rate.
 
-<img src="./assets/Image1.png"><br>
+<img src="https://github.com/Twistywasabi/alura_JAVA_CurrencyTranslation/blob/main/assets/Image1.PNG"><br>
 
 ## Technologies and Tools 👨‍💻
 
