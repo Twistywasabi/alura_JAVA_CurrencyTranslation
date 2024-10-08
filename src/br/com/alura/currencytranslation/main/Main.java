@@ -12,10 +12,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
 
+        int i = 0;
+        Scanner userInput = new Scanner(System.in);
         Gson gson = new Gson();
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -27,10 +30,58 @@ public class Main {
 
         ExchangeRatesAYRTech exchangeRatesListAYRTech = gson.fromJson(json, ExchangeRatesAYRTech.class);
         ExchangeRates exchangeRatesList = new ExchangeRates(exchangeRatesListAYRTech.conversionRates());
-        System.out.println("exchangeRatesList converted");
-        //exchangeRatesList.convertUsdArs(false);
-        //exchangeRatesList.convertUsdBrl(false);
-        exchangeRatesList.convertUsdCop(false);
+        System.out.println("**************************************************");
+        System.out.println("Seja bem vindo/a ao Conversor de moedas :]");
+        System.out.println("**************************************************");
+        String menu = """
+                    
+                    1) Dólar ==> Peso Argentino
+                    2) Peso Argentino ==> Dólar
+                    3) Dólar ==> Real Brasileiro
+                    4) Real Brasileiro ==> Dólar
+                    5) Dólar ==> Peso Colombiano
+                    6) Peso Colombiano ==> Dólar
+                    7) Sair
+                    
+                    Selecione uma opção válida:
+                    """;
+
+        while (i != 7){
+
+            System.out.println(menu);
+            i =userInput.nextInt();
+            switch (i) {
+                case 1:
+                    exchangeRatesList.convertUsdArs(false);
+                    break;
+                case 2:
+                    exchangeRatesList.convertUsdArs(true);
+                    break;
+                case 3:
+                    exchangeRatesList.convertUsdBrl(false);
+                    break;
+                case 4:
+                    exchangeRatesList.convertUsdBrl(true);
+                    break;
+                case 5:
+                    exchangeRatesList.convertUsdCop(false);
+                    break;
+                case 6:
+                    exchangeRatesList.convertUsdCop(true);
+                    break;
+                case 7:
+                    System.out.println("saindo do sistema...");
+                    break;
+                default:
+                    System.out.println("Digite um número válido");
+                    System.out.println("**************************************************");
+                    break;
+            }
+
+        }
+
+
+
 
     }
 }

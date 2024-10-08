@@ -6,10 +6,9 @@ A currency translation based on "Praticando Java: Challenge conversor de moedas"
 
 Create a program with user interaction by text (console) with at least six currency conversion option. The user select one of the options of the menu and then he inputs the amount of currency to convert. In the end, it shows the converted final value and finish the program. 
 
-For this project, we will consume the Exchange Rate API (link on "references") to make a dynamic exchange rate
+For this project, we will consume the Exchange Rate API (link on "references") to make a dynamic exchange rate.
 
-Currency Converter Image
-
+<img src="./assets/Image1.png"><br>
 
 ## Technologies and Tools 👨‍💻
 
@@ -17,6 +16,8 @@ Currency Converter Image
 - Gson 2.10.1
 
 ## Result 🎁
+
+- https://github.com/Twistywasabi/alura_JAVA_CurrencyTranslation
 
 ## References 📚
 
@@ -26,10 +27,12 @@ Currency Converter Image
 
 ## Updates 🕐
 
+- 2024/10/08
+
+    First version
+
 ## Pending issues 🚨
 
-- Create menu
-- Consume the API
-- JSON analysis
-- Currency filter
-- Results exhibition
+- JAVA Error Handling
+- Some commentary adjustments
+- Add some new functions
